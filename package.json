@@ -1,0 +1,30 @@
+{
+  "name": "@orche/validators",
+  "version": "0.1.0",
+  "description": "Orche - Global and local validators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orchejs/validators.git"
+  },
+  "keywords": [
+    "Validators",
+    "\"Global",
+    "Validators\"",
+    "\"Local",
+    "Validators\"",
+    "\"Customized",
+    "Validators\"",
+    "\"REST",
+    "Validators\""
+  ],
+  "author": "Mauricio Gemelli Vigolo",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/orchejs/validators/issues"
+  },
+  "homepage": "https://github.com/orchejs/validators#readme"
+}
