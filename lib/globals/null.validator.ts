@@ -6,7 +6,7 @@ export class NullValidator extends Validator {
     super();
   }
 
-  public validate(): any {
-    throw new Error('Not implemented yet.');
+  validate(): any {
+    
   }
 }
