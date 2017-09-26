@@ -1,4 +1,14 @@
-vscode
-node_modules
+.DS_STORE
 *-lock.json
 *.lock
+*.log
+*.iml
+
+node_modules
+dist
+build
+coverage
+log
+.vscode
+.nyc_output
+.idea
