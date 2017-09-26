@@ -4,9 +4,10 @@
   "description": "Orche - Global and local validators",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf ./build ./coverage",
     "test": "node_modules/.bin/mocha",
     "coverage": "node_modules/.bin/nyc --reporter=lcov node_modules/.bin/mocha",
-    "clean-coverage": "npm run clean & npm run coverage"  
+    "clean-coverage": "npm run clean & npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@types/node": "^8.0.31",
     "chai": "^4.1.2",
     "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.2"
   }
