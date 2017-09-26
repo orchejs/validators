@@ -1,11 +1,6 @@
-import { Validator } from '../validator';
+import { Validator } from '../interfaces';
 
-export class NotEmptyValidator extends Validator {
-
-  constructor() {
-    super();
-  }
-
+export class NotEmptyValidator implements Validator {
   public validate(): any {
     throw new Error('Not implemented yet.');
   }

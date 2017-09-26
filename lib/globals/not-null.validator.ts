@@ -1,23 +1,27 @@
-import { Validator } from '../validator';
-import { ValidatorError } from '../../interfaces/validator-error';
+/**
+ * @license
+ * Copyright Mauricio Gemelli Vigolo. All Rights Reserved.
+ *
+ * Use of this source code is governed by a MIT-style license that can be
+ * found in the LICENSE file at https://github.com/orchejs/validators/LICENSE
+ */
+import { Validator, ValidatorError } from '../interfaces';
 
 /**
+ * @class
+ * @description
  * Checks if a value is null or undefined.
  */
-export class NotNullValidator extends Validator {
-  constructor() {
-    super();
-  }
-
-  validate(...params: any[]): Promise<ValidatorError> {
-    let response: ValidatorError;
-
-    if (!params || params.length < 1 || params[0] === null || params[0] === undefined) {
-      response = {
-        message: 'Value was null or undefined'
-      };
-    }
-
-    return Promise.resolve(response);
+export class NotNullValidator implements Validator {
+  validate(params: any): Promise<ValidatorError> {
+    return new Promise((resolve, reject) => {
+      if (params === null || params === undefined) {
+        let response: ValidatorError = {
+          message: 'Value was null or undefined.'
+        };
+        resolve(response);
+      }
+      resolve();
+    });
   }
 }
