@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./build ./coverage .nyc_output",
     "test": "node_modules/.bin/mocha",
-    "coverage": "npm run clean && node_modules/.bin/nyc --reporter=lcov node_modules/.bin/mocha",
-    "travis": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coverage": "npm run clean && node_modules/.bin/nyc --reporter=lcov node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
