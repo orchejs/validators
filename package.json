@@ -4,7 +4,9 @@
   "description": "Orche - Global and local validators",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha",
+    "coverage": "node_modules/.bin/nyc --reporter=lcov node_modules/.bin/mocha",
+    "clean-coverage": "npm run clean & npm run coverage"  
   },
   "repository": {
     "type": "git",
@@ -12,19 +14,23 @@
   },
   "keywords": [
     "Validators",
-    "\"Global",
-    "Validators\"",
-    "\"Local",
-    "Validators\"",
-    "\"Customized",
-    "Validators\"",
-    "\"REST",
-    "Validators\""
+    "Global Validators",
+    "Local Validators",
+    "Customized Validators"
   ],
   "author": "Mauricio Gemelli Vigolo",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/orchejs/validators/issues"
   },
-  "homepage": "https://github.com/orchejs/validators#readme"
+  "homepage": "https://github.com/orchejs/validators#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.31",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2"
+  }
 }
