@@ -16,5 +16,5 @@ export interface Validator {
   /**
    * 
    */
-  validate(params: any): Promise<ValidatorError>;
+  validate(value: any, validatorParams?: any): Promise<ValidatorError>;
 }

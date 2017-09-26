@@ -28,14 +28,10 @@ export class ValidatorRunner {
       }
 
       for (const validatorDetails of validators) {
-        if (!validatorDetails.validator) {
-          continue;
-        }
-
         const validator = new validatorDetails.validator();
         let validatorError: ValidatorError;
         try {
-          validatorError = await validator.validate(validatorDetails.parameters);
+          validatorError = await validator.validate(value, validatorDetails.parameters);
           
           if (validatorError) {
             validatorError.fieldName = fieldName;
@@ -44,6 +40,7 @@ export class ValidatorRunner {
           }
         } catch (error) {
           reject(error);
+          return;
         }
       }
 
