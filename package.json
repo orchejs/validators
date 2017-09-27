@@ -1,12 +1,19 @@
 {
-  "name": "@orche/validators",
+  "name": "@orchejs/validators",
   "version": "0.1.0",
   "description": "Orche - Global and local validators",
   "main": "index.js",
+  "typings": "index.d.ts",
+  "engines": {
+    "node": ">=6.9.0"
+  },
   "scripts": {
     "clean": "rm -rf ./build ./coverage .nyc_output",
     "lint": "node_modules/.bin/tslint ./lib/**/*.ts ./test/**/*.ts",
     "test": "node_modules/.bin/mocha",
+    "tsc": "node_modules/.bin/tsc --project tsconfig.json",
+    "post-compile": "cp package.json README.md ./build/validators",
+    "build": "npm run clean && npm run test && npm run tsc && npm run post-compile",
     "coverage": "npm run clean && node_modules/.bin/nyc --reporter=lcov node_modules/.bin/mocha"
   },
   "repository": {
