@@ -43,7 +43,6 @@ Before submiting an issue, please search if there is an open issue for the same 
 
 For opening an issue, you can fill out this [issue form](https://github.com/orchejs/validators/issues/new).
 
-
 ### Submitting a Pull Request (PR)
 
 Before submiting a Pull Request, please:
