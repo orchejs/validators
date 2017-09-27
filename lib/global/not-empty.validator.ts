@@ -10,19 +10,19 @@ import { Validator, ValidatorError } from '../interfaces';
 /**
  * @class
  * @description
- * Checks if a value is null or undefined.
+ * Validate if the value is different of undefined, null and blank ''
  */
-export class NotNullValidator implements Validator {
+export class NotEmptyValidator implements Validator {
   /**
-   * Validate if a value is null or undefined.
-   * 
-   * @param value value that will be performed the validations
+   * Validation if the value is empty.
+   * @param value text that will be checked if it is empty.
    */
-  validate(value: any): Promise<ValidatorError> {
+  public validate(value: string): Promise<ValidatorError> {
     return new Promise((resolve, reject) => {
-      if (value === null || value === undefined) {
+      if (!value || value.trim() === '') {
         resolve({
-          message: 'Value was null or undefined.'
+          value,
+          message: 'Value is empty, null or undefined'
         });
         return;
       }

@@ -7,9 +7,9 @@
  */
 
 /**
- * @description
- * 
  * @interface
+ * @description
+ * teste
  */
 export interface ValidatorDetails {
   /**

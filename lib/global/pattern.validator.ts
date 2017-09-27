@@ -10,19 +10,24 @@ import { Validator, ValidatorError } from '../interfaces';
 /**
  * @class
  * @description
- * Checks if a value is null or undefined.
+ * Validator to match if the value matches a regex.
  */
-export class NotNullValidator implements Validator {
+export class PatternValidator implements Validator {
   /**
-   * Validate if a value is null or undefined.
+   * Validates if the value matches a pattern.
    * 
-   * @param value value that will be performed the validations
+   * @param value value to be matched
+   * @param regex regex value
    */
-  validate(value: any): Promise<ValidatorError> {
+  public validate(value: string, regex: RegExp): Promise<ValidatorError> {
     return new Promise((resolve, reject) => {
-      if (value === null || value === undefined) {
+      if (!regex) {
+        reject('The regex must be informed.');
+        return;
+      }
+      if (!regex.test(value)) {
         resolve({
-          message: 'Value was null or undefined.'
+          message: "Pattern wasn't fulfilled"
         });
         return;
       }
