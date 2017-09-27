@@ -28,7 +28,7 @@ export class MinValidator implements Validator {
         return;
       }
       if (!value || value < minValue) {
-        let response: ValidatorError = {
+        const response: ValidatorError = {
           value,
           message: `The value is less than ${minValue}`,
         };

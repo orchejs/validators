@@ -18,18 +18,24 @@ describe('EmailValidator', () => {
 
   describe('#validate', () => {
     it('Should result in error if the email value is undefined', async () => {
-      let result = await validatorRunner.runValidations(undefined, 'email field', [ {validator: EmailValidator} ]);
+      const result = await validatorRunner.runValidations(undefined, 'email field', [
+        { validator: EmailValidator }
+      ]);
       expect(result).to.be.length(1);
     });
 
     it('Should result in error if the email is not valid', async () => {
-      let result = await validatorRunner.runValidations('@email.com', 'email field', [ {validator: EmailValidator} ]);
+      const result = await validatorRunner.runValidations('@email.com', 'email field', [
+        { validator: EmailValidator }
+      ]);
       expect(result).to.be.length(1);
     });
 
     it('Should pass if the email is valid', async () => {
-      let result = await validatorRunner.runValidations('myemail@email.com', 'email field', [ {validator: EmailValidator} ]);
+      const result = await validatorRunner.runValidations('myemail@email.com', 'email field', [
+        { validator: EmailValidator }
+      ]);
       expect(result).to.be.length(0);
-    });     
+    });
   });
 });

@@ -21,7 +21,7 @@ export class MaxLengthValidator implements Validator {
     return new Promise((resolve, reject) => {
       let isValid: boolean = true;
       if (length === undefined || length === null) {
-        reject("The max length wasn't informed.");
+        reject('The max length wasn\'t informed.');
         return;
       }
       if (!value || value.length > length) {

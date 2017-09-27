@@ -28,7 +28,7 @@ export class MaxValidator implements Validator {
         return;
       }
       if (value > maxValue) {
-        let response: ValidatorError = {
+        const response: ValidatorError = {
           value,
           message: `The value is greater than ${maxValue}`,
         };

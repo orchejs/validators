@@ -21,7 +21,7 @@ export class MinLengthValidator implements Validator {
     return new Promise((resolve, reject) => {
       let isValid: boolean = true;
       if (length === undefined || length === null) {
-        reject("The min length wasn't informed.");
+        reject('The min length wasn\'t informed.');
         return;
       }
       if (!value || !value.length || value.length < length) {

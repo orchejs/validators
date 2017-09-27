@@ -17,7 +17,7 @@ describe('MaxValidator', () => {
     validatorRunner = new ValidatorRunner();
   });
 
-  beforeEach(()=> {
+  beforeEach(() => {
     details = {
       validator: MaxValidator,
       parameters: 50
@@ -28,25 +28,25 @@ describe('MaxValidator', () => {
     it('Should result in error if maxValue is undefined', async () => {
       details.parameters = undefined;
       try {
-        let result = await validatorRunner.runValidations(10, undefined, [ details ]);
+        const result = await validatorRunner.runValidations(10, undefined, [details]);
       } catch (error) {
         expect(error).to.be.not.undefined;
       }
     });
 
     it('Should pass if value is undefined', async () => {
-      let result = await validatorRunner.runValidations(undefined, undefined, [ details ]);
+      const result = await validatorRunner.runValidations(undefined, undefined, [details]);
       expect(result).to.be.length(0);
     });
 
     it('Should result in error if value is higher than 50', async () => {
-      let result = await validatorRunner.runValidations(100, undefined, [ details ]);
+      const result = await validatorRunner.runValidations(100, undefined, [details]);
       expect(result).to.be.length(1);
     });
 
     it('Should pass if value is lower than max', async () => {
-      let result = await validatorRunner.runValidations(30, undefined, [ details ]);
+      const result = await validatorRunner.runValidations(30, undefined, [details]);
       expect(result).to.be.length(0);
-    });     
+    });
   });
 });

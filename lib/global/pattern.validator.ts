@@ -27,7 +27,7 @@ export class PatternValidator implements Validator {
       }
       if (!regex.test(value)) {
         resolve({
-          message: "Pattern wasn't fulfilled"
+          message: 'Pattern wasn\'t fulfilled'
         });
         return;
       }

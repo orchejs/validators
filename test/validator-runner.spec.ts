@@ -16,19 +16,19 @@ describe('ValidatorRunner', () => {
 
   describe('#runValidations', () => {
     it('Should execute without errors if there are no validators', async () => {
-      let result = await validatorRunner.runValidations('some value', 'some field', []);
+      const result = await validatorRunner.runValidations('some value', 'some field', []);
       expect(result).to.be.length(0);
     });
 
     it('Should run a simple validation that results in an error.', async () => {
-      let result = await validatorRunner.runValidations(undefined, 'field1', [
+      const result = await validatorRunner.runValidations(undefined, 'field1', [
         { validator: NotNullValidator }
       ]);
       expect(result).to.be.length(1);
     });
 
     it('Should reject and interrupt the validation flow, as an exception happened', async () => {
-      let result;
+      const result;
       try {
         result = await validatorRunner.runValidations('some value', 'field1', [
           { validator: ForceErrorValidator }
@@ -40,7 +40,7 @@ describe('ValidatorRunner', () => {
     });
 
     it('Should run without validator errors', async () => {
-      let result = await validatorRunner.runValidations('some value', 'field1', [
+      const result = await validatorRunner.runValidations('some value', 'field1', [
         { validator: NotNullValidator }
       ]);
       expect(result).to.be.length(0);
