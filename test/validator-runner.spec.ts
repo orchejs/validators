@@ -28,7 +28,7 @@ describe('ValidatorRunner', () => {
     });
 
     it('Should reject and interrupt the validation flow, as an exception happened', async () => {
-      const result;
+      let result;
       try {
         result = await validatorRunner.runValidations('some value', 'field1', [
           { validator: ForceErrorValidator }
