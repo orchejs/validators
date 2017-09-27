@@ -10,7 +10,7 @@ This library contains common validators that may be used in Orchejs projects. It
 
 This project is divided in two kinds of validators: Global and Local. The first one comprises common validators, which means, anything that are not from a specific country or region. Examples of global validators are email, not null and length checkers. Local validators are anything that belongs to a specific country like zip code, documents as ID cards and so on.
 
-The idea here is to make a public repository that may grow with the community contribution. So if you need a validator that does not exists here, please open a PR and help us to improve it. For contributions, please check the [contributions]() topic.
+The idea here is to make a public repository that may grow with the community contribution. So if you need a validator that does not exists here, please open a PR and help us to improve it. For contributions, please check the [contributions](#con) topic.
 
 -------
 ## Topics
@@ -22,7 +22,7 @@ The idea here is to make a public repository that may grow with the community co
 - [Contributing](#con)
 - [License](#lic)
 
-## <a name="#huo"></a> How to use it in Orchejs
+## <a name="huo"></a> How to use it in Orchejs
 
 ### How to install?
 
@@ -302,7 +302,7 @@ specific country validation, please take a look at [Implementing new Validators]
 
 ## <a name="inv"></a> Implementing new Validators
 
-To implement a new validator to use in your project, you should implement the Validator interface.
+To create a new validator to your project, you should implement the Validator interface.
 
 All validation rules must be inside of the validate method. For example:
 
@@ -339,11 +339,14 @@ const validatorError: ValidatorError = {
 resolve(validatorError);
 ```
 
-**Important**: Avoid to use external libraries, except those that are pretty generic like lodash or momentjs. The reason is to avoid excessive dependencies to the project, which may result in more bugs.
+**Important**: Avoid to use external libraries, except those that are pretty generic like lodash or 
+momentjs. This is for keeping away from excessive dependencies as it could result in bugs.
 
 ### Share to the community
 
-If you think that your validator can be used by others, please consider sharing to the communit. The first thing is to open an [issue](https://github.com/orchejs/validators/issues/new) and after being accepted, submit your Pull Request. 
+If you think that your validator can be used by others, please consider sharing to the communit. 
+The first thing is to open an [issue](https://github.com/orchejs/validators/issues/new) and after 
+being accepted, submit your Pull Request. 
 
 Don't forget to take a look at the [contribution guidelines](#con).
 

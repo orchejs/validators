@@ -55,7 +55,11 @@ Before submiting a Pull Request, please:
 
 ## <a name="cru"></a> Coding rules
 
-This project uses the Airbnb coding style with little exceptions. Details:
+This project uses the [Airbnb coding style](https://github.com/airbnb/javascript) with little 
+exceptions. The project tslint.json file extends tslint-config-airbnb. Check if you have the tslint 
+extension in your editor.
+
+Details:
 - All code **must be tested** by one or more specs.
 - The code must also be documented following the [jsdoc guidelines](http://usejsdoc.org/).
 - Wrap all code at 100 characters.
@@ -64,7 +68,7 @@ This project uses the Airbnb coding style with little exceptions. Details:
 
 This project follows the [Angular commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit). 
 
-From the angular js:
+From the Angular documentation:
 
 ### Commit message format
 
