@@ -10,7 +10,7 @@ import { Validator, ValidatorError } from '../interfaces';
 /**
  * @class
  * @description
- * Validate if the value is different of undefined, null and blank ''
+ * Validate if a value is not undefined, null and blank ''
  */
 export class NotEmptyValidator implements Validator {
   /**

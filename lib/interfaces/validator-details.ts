@@ -9,7 +9,7 @@
 /**
  * @interface
  * @description
- * teste
+ * Details of a validator that will be used by the ValidatorRunner.
  */
 export interface ValidatorDetails {
   /**

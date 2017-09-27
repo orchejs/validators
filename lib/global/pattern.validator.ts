@@ -10,7 +10,7 @@ import { Validator, ValidatorError } from '../interfaces';
 /**
  * @class
  * @description
- * Validator to match if the value matches a regex.
+ * Validates if a value matches a regex.
  */
 export class PatternValidator implements Validator {
   /**

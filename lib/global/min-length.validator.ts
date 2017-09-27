@@ -8,7 +8,8 @@
 import { Validator, ValidatorError } from '../interfaces';
 
 /**
- * Validates if the value has a minimum length.
+ * Validates if the length of a value, that can be a string or Array, is higher than the 
+ * minimum length.
  */
 export class MinLengthValidator implements Validator {
   /**

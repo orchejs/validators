@@ -8,7 +8,8 @@
 import { Validator, ValidatorError } from '../interfaces';
 
 /**
- * Validates if the value is lower than the maximum length.
+ * Validates if the length of a value, that can be a string or Array, is not higher than the 
+ * maximum length.
  */
 export class MaxLengthValidator implements Validator {
   /**

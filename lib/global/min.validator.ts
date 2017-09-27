@@ -11,7 +11,7 @@ import { Validator, ValidatorError } from '../interfaces';
 /**
  * @class
  * @description
- * Validates that the value should be greater than the reference number.
+ * Validates if a value is higher than a number.
  */
 export class MinValidator implements Validator {
   /**
