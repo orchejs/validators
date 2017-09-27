@@ -9,7 +9,8 @@
       "lib/**/*.ts"
   ],
   "exclude": [
-      "**/*.d.ts"
+      "**/*.d.ts",
+      "lib/interfaces/**/*.ts"
   ],
   "reporter": [
       "html"
