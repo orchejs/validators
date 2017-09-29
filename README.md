@@ -2,7 +2,6 @@ Orche Validators
 ==================
 
 [![Build Status](https://travis-ci.org/orchejs/validators.svg?branch=master)](https://travis-ci.org/orchejs/validators)
-[![Coverage Status](https://coveralls.io/repos/github/orchejs/validators/badge.svg?branch=master)](https://coveralls.io/github/orchejs/validators?branch=master)
 
 -------
 
